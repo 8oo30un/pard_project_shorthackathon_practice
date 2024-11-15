@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useRecoilState } from "recoil";
 import styled from "styled-components";
+import { stateCheck } from "../../Atom";
 
 function SeminarBox(props){
-const [check, checkValue] = useState('did you practice?');
+const [seminarCheck,setSeminarCheck]  = useRecoilState(stateCheck);
 const checkPractice = ()=>{
-  checkValue('I did it!');
+  setSeminarCheck('I did it!');
 }
 return(
   <Box>
@@ -12,7 +14,7 @@ return(
     {props.name}
     </div>
     <div>
-      {check} 
+      {seminarCheck} 
       <button onClick={checkPractice}>check</button>
     </div>
   </Box>

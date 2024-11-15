@@ -36,6 +36,15 @@ position: fixed; /* 화면에 고정 */
 right: 0; /* 오른쪽에 위치 */
 top: 50%; /* 상단에 위치 */
 background-color: #f0f0f0; /* 배경색 */
+@media (min-width: 800px){
+  background-color: azure;
+  width:50px;
+}
+
+@media (min-width: 1000px){
+  background-color: black;
+  width:50px;
+}
 `;
 
 export const SubTitle1 = styled.div`
